@@ -5,6 +5,11 @@ on:
     branches:
       - master
 
+permissions:
+ security-events: write
+ contents: read
+ actions: read
+ 
 jobs:
  build-and-analyze:
     runs-on: windows-latest
