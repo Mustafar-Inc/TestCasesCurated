@@ -9,7 +9,7 @@ permissions:
  security-events: write
  contents: read
  actions: read
- 
+
 jobs:
  build-and-analyze:
     runs-on: windows-latest
@@ -25,16 +25,16 @@ jobs:
       run: dotnet restore
 
     - name: Build TestCaseSupport
-      run: msbuild testcasesupport/TestCaseSupport/TestCaseSupport.csproj /p:Configuration=Debug /p:Platform=AnyCPU
+      run: msbuild testcasesupport/TestCaseSupport/TestCaseSupport.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
     - name: Build CWE190_Integer_Overflow_s01
-      run: msbuild CWE190_Integer_Overflow\s01\CWE190_Integer_Overflow_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU
+      run: msbuild CWE190_Integer_Overflow\s01\CWE190_Integer_Overflow_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
     - name: Build CWE89_SQL_Injection_s01
-      run: msbuild CWE89_SQL_Injection\s01\CWE89_SQL_Injection_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU
+      run: msbuild CWE89_SQL_Injection\s01\CWE89_SQL_Injection_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
     - name: Build CWE90_LDAP_Injection
-      run: msbuild CWE90_LDAP_Injection\CWE90_LDAP_Injection.csproj /p:Configuration=Debug /p:Platform=AnyCPU
+      run: msbuild CWE90_LDAP_Injection\CWE90_LDAP_Injection.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
