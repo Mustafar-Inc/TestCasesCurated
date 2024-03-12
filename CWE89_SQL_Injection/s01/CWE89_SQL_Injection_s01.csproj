@@ -10,6 +10,7 @@
     <RootNamespace>CWE89_SQL_Injection_s01</RootNamespace>
     <AssemblyName>CWE89_SQL_Injection_s01</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+	  <RuntimeIdentifiers>win</RuntimeIdentifiers>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -36,9 +37,6 @@
     <StartupObject>testcases.CWE89_SQL_Injection.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NLog.4.0.0\lib\net45\NLog.dll</HintPath>
-    </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
       <HintPath>..\..\..\..\lib\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
@@ -57,6 +55,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="netstandard" />
   </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NLog" Version="4.0.0" />
+	</ItemGroup>
   <ItemGroup>
     <Compile Include="CWE89_SQL_Injection__Web_Connect_tcp_CommandText_01.cs" />
     <Compile Include="CWE89_SQL_Injection__Web_Connect_tcp_CommandText_02.cs" />

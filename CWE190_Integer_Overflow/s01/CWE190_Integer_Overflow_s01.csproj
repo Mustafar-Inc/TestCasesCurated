@@ -10,6 +10,7 @@
     <RootNamespace>CWE190_Integer_Overflow_s01</RootNamespace>
     <AssemblyName>CWE190_Integer_Overflow_s01</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+	  <RuntimeIdentifiers>win</RuntimeIdentifiers>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
