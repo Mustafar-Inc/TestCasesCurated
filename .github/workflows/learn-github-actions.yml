@@ -3,7 +3,7 @@ name: CodeQL Analysis on Push
 on:
  push:
     branches:
-      - main
+      - master
 
 jobs:
  build-and-analyze:
