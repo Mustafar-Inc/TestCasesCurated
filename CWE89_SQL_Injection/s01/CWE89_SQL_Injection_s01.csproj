@@ -36,8 +36,8 @@
     <StartupObject>testcases.CWE89_SQL_Injection.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog">
-      <HintPath>..\..\..\..\lib\NLog.dll</HintPath>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NLog.4.0.0\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
       <HintPath>..\..\..\..\lib\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
@@ -1039,6 +1039,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\testcasesupport\TestCaseSupport\TestCaseSupport.csproj">
