@@ -1,13 +1,28 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: CodeQL Analysis on Push
+
+on:
+ push:
+    branches:
+      - main
+
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
+ build-and-analyze:
+    runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Build Solution
+      run: msbuild TestCasesCurated.sln /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: csharp
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
