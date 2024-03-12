@@ -16,20 +16,23 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
 
+    - name: Restore dependencies
+      run: dotnet restore
+
     - name: Build TestCaseSupport
-      run: msbuild testcasesupport/TestCaseSupport/TestCaseSupport.csproj /p:Configuration=Release /p:Platform=AnyCPU
+      run: msbuild testcasesupport/TestCaseSupport/TestCaseSupport.csproj /p:Configuration=Debug /p:Platform=AnyCPU
 
     - name: Build CWE190_Integer_Overflow_s01
-      run: msbuild CWE190_Integer_Overflow\s01\CWE190_Integer_Overflow_s01.csproj /p:Configuration=Release /p:Platform=AnyCPU
+      run: msbuild CWE190_Integer_Overflow\s01\CWE190_Integer_Overflow_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU
 
     - name: Build CWE89_SQL_Injection_s01
-      run: msbuild CWE89_SQL_Injection\s01\CWE89_SQL_Injection_s01.csproj /p:Configuration=Release /p:Platform=AnyCPU
+      run: msbuild CWE89_SQL_Injection\s01\CWE89_SQL_Injection_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU
 
     - name: Build CWE90_LDAP_Injection
-      run: msbuild CWE90_LDAP_Injection\CWE90_LDAP_Injection.csproj /p:Configuration=Release /p:Platform=AnyCPU
+      run: msbuild CWE90_LDAP_Injection\CWE90_LDAP_Injection.csproj /p:Configuration=Debug /p:Platform=AnyCPU
 
     - name: Build TestCasesCurated
-      run: msbuild TestCasesCurated.sln /p:Configuration=Release /p:Platform=AnyCPU
+      run: msbuild TestCasesCurated.sln /p:Configuration=Debug /p:Platform=AnyCPU
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
