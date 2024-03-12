@@ -16,7 +16,19 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
 
-    - name: Build Solution
+    - name: Build TestCaseSupport
+      run: msbuild TestCaseSupport.csproj /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Build CWE190_Integer_Overflow_s01
+      run: msbuild CWE190_Integer_Overflow_s01.csproj /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Build CWE89_SQL_Injection_s01
+      run: msbuild CWE89_SQL_Injection_s01.csproj /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Build CWE90_LDAP_Injection
+      run: msbuild CWE90_LDAP_Injection.csproj /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Build TestCasesCurated
       run: msbuild TestCasesCurated.sln /p:Configuration=Release /p:Platform="Any CPU"
 
     - name: Initialize CodeQL
