@@ -35,10 +35,8 @@
   <PropertyGroup>
     <StartupObject>testcases.CWE190_Integer_Overflow.Program</StartupObject>
   </PropertyGroup>
+	
   <ItemGroup>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NLog.4.0.0\lib\net45\NLog.dll</HintPath>
-    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
@@ -61,6 +59,9 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Drawing" />
     <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+		<PackageReference Include="NLog" Version="4.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CWE190_Integer_Overflow__Byte_console_readLine_add_01.cs" />
