@@ -10,6 +10,7 @@
     <RootNamespace>TestCaseSupport</RootNamespace>
     <AssemblyName>TestCaseSupport</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+	  <RuntimeIdentifiers>win</RuntimeIdentifiers>
 	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
