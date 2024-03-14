@@ -70,6 +70,19 @@ jobs:
   
     - name: Build CWE476_NULL_Pointer_Dereference
       run: msbuild CWE476_NULL_Pointer_Dereference\CWE476_NULL_Pointer_Dereference.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+    
+    - name: Build CWE23_Relative_Path_Traversal
+      run: msbuild CWE23_Relative_Path_Traversal\CWE23_Relative_Path_Traversal.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE284_Improper_Access_Control
+      run: msbuild CWE284_Improper_Access_Control\CWE284_Improper_Access_Control.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE566_Authorization_Bypass_Through_SQL_Primary
+      run: msbuild CWE566_Authorization_Bypass_Through_SQL_Primary\CWE566_Authorization_Bypass_Through_SQL_Primary.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE601_Open_Redirect
+      run: msbuild CWE601_Open_Redirect\CWE601_Open_Redirect.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
+
