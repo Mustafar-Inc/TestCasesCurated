@@ -83,6 +83,12 @@ jobs:
     - name: Build CWE601_Open_Redirect
       run: msbuild CWE601_Open_Redirect\CWE601_Open_Redirect.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
+    - name: Build CWE113_HTTP_Response_Splitting_s01
+      run: msbuild CWE113_HTTP_Response_Splitting\s01\CWE113_HTTP_Response_Splitting_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE113_HTTP_Response_Splitting_s02
+      run: msbuild CWE113_HTTP_Response_Splitting\s02\CWE113_HTTP_Response_Splitting_s02.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
 
