@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWE190_Integer_Overflow_s01
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWE89_SQL_Injection_s01", "CWE89_SQL_Injection\s01\CWE89_SQL_Injection_s01.csproj", "{22FC9F8E-4BB1-7B1C-E360-6A24B52FB17B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWE89_SQL_Injection_s02", "CWE89_SQL_Injection\s02\CWE89_SQL_Injection_s02.csproj", "{CEF94E4B-67CC-0653-CCD5-74E68F506F5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{22FC9F8E-4BB1-7B1C-E360-6A24B52FB17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22FC9F8E-4BB1-7B1C-E360-6A24B52FB17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22FC9F8E-4BB1-7B1C-E360-6A24B52FB17B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF94E4B-67CC-0653-CCD5-74E68F506F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF94E4B-67CC-0653-CCD5-74E68F506F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF94E4B-67CC-0653-CCD5-74E68F506F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF94E4B-67CC-0653-CCD5-74E68F506F5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
