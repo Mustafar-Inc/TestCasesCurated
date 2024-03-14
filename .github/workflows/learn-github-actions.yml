@@ -35,6 +35,24 @@ jobs:
     - name: Build CWE190_Integer_Overflow_s01
       run: msbuild CWE190_Integer_Overflow\s01\CWE190_Integer_Overflow_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
+    - name: Build CWE190_Integer_Overflow_s02
+      run: msbuild CWE190_Integer_Overflow\s02\CWE190_Integer_Overflow_s02.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE190_Integer_Overflow_s03
+      run: msbuild CWE190_Integer_Overflow\s03\CWE190_Integer_Overflow_s03.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE190_Integer_Overflow_s04
+      run: msbuild CWE190_Integer_Overflow\s04\CWE190_Integer_Overflow_s04.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE190_Integer_Overflow_s05
+      run: msbuild CWE190_Integer_Overflow\s05\CWE190_Integer_Overflow_s05.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE190_Integer_Overflow_s06
+      run: msbuild CWE190_Integer_Overflow\s06\CWE190_Integer_Overflow_s06.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE190_Integer_Overflow_s07
+      run: msbuild CWE190_Integer_Overflow\s07\CWE190_Integer_Overflow_s07.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
     - name: Build CWE89_SQL_Injection_s01
       run: msbuild CWE89_SQL_Injection\s01\CWE89_SQL_Injection_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
@@ -43,6 +61,15 @@ jobs:
 
     - name: Build CWE90_LDAP_Injection
       run: msbuild CWE90_LDAP_Injection\CWE90_LDAP_Injection.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE94_Improper_Control_of_Generation_Of_Code
+      run: msbuild CWE94_Improper_Control_of_Generation_of_Code\CWE94_Improper_Control_of_Generation_of_Code.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE78_OS_Command_Injection
+      run: msbuild CWE78_OS_Command_Injection\CWE78_OS_Command_Injection.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+  
+    - name: Build CWE476_NULL_Pointer_Dereference
+      run: msbuild CWE476_NULL_Pointer_Dereference\CWE476_NULL_Pointer_Dereference.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3

@@ -10,7 +10,8 @@
     <RootNamespace>CWE190_Integer_Overflow_s06</RootNamespace>
     <AssemblyName>CWE190_Integer_Overflow_s06</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+	  <RuntimeIdentifiers>win</RuntimeIdentifiers>
+	  <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -36,13 +37,10 @@
     <StartupObject>testcases.CWE190_Integer_Overflow.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-	<Reference Include="NLog">
-      <HintPath>..\..\..\..\lib\NLog.dll</HintPath>
-    </Reference>
-	<Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
       <HintPath>..\..\..\..\lib\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
-	<Reference Include="System.DirectoryServices">
+    <Reference Include="System.DirectoryServices">
       <HintPath>..\..\..\..\lib\System.DirectoryServices.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -53,11 +51,14 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-	<Reference Include="System.Web" />
-	<Reference Include="System.Drawing" />
-	<Reference Include="netstandard" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="netstandard" />
   </ItemGroup>
-  <ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NLog" Version="4.0.0" />
+	</ItemGroup>
+	<ItemGroup>
     <Compile Include="CWE190_Integer_Overflow__UInt16_rand_square_01.cs" />
     <Compile Include="CWE190_Integer_Overflow__UInt16_rand_square_02.cs" />
     <Compile Include="CWE190_Integer_Overflow__UInt16_rand_square_03.cs" />
@@ -1034,7 +1035,6 @@
     <Compile Include="CWE190_Integer_Overflow__UInt64_max_square_81_base.cs" />
     <Compile Include="CWE190_Integer_Overflow__UInt64_max_square_81_goodB2G.cs" />
     <Compile Include="CWE190_Integer_Overflow__UInt64_max_square_81_goodG2B.cs" />
-
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1042,7 +1042,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\TestCaseSupport\TestCaseSupport\TestCaseSupport.csproj">
+    <ProjectReference Include="..\..\testcasesupport\TestCaseSupport\TestCaseSupport.csproj">
       <Project>{4CDBAE35-8CD1-4A0F-8912-B79D0BB43B83}</Project>
       <Name>TestCaseSupport</Name>
     </ProjectReference>
