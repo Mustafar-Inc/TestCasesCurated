@@ -89,6 +89,57 @@ jobs:
     - name: Build CWE113_HTTP_Response_Splitting_s02
       run: msbuild CWE113_HTTP_Response_Splitting\s02\CWE113_HTTP_Response_Splitting_s02.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
 
+    - name: Build CWE261_Weak_Cryptography_for_Passwords
+      run: msbuild CWE261_Weak_Cryptography_for_Passwords\CWE261_Weak_Cryptography_for_Passwords.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+    
+    - name: Build CWE319_Cleartext_Tx_Sensitive_Info
+      run: msbuild CWE319_Cleartext_Tx_Sensitive_Info\CWE319_Cleartext_Tx_Sensitive_Info.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+    
+    - name: Build CWE325_Missing_Required_Cryptographic_Step
+      run: msbuild CWE325_Missing_Required_Cryptographic_Step\CWE325_Missing_Required_Cryptographic_Step.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+  
+    - name: Build CWE321_Hard_Coded_Cryptographic_Key
+      run: msbuild CWE321_Hard_Coded_Cryptographic_Key\CWE321_Hard_Coded_Cryptographic_Key.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE327_Use_Broken_Crypto
+      run: msbuild CWE327_Use_Broken_Crypto\CWE327_Use_Broken_Crypto.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE328_Reversible_One_Way_Hash
+      run: msbuild CWE328_Reversible_One_Way_Hash\CWE328_Reversible_One_Way_Hash.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE329_Not_Using_Random_IV_with_CBC_Mode
+      run: msbuild CWE329_Not_Using_Random_IV_with_CBC_Mode\CWE329_Not_Using_Random_IV_with_CBC_Mode.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE336_Same_Seed_in_PRNG
+      run: msbuild CWE336_Same_Seed_in_PRNG\CWE336_Same_Seed_in_PRNG.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE338_Weak_PRNG
+      run: msbuild CWE338_Weak_PRNG\CWE338_Weak_PRNG.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE523_Unprotected_Cred_Transport
+      run: msbuild CWE523_Unprotected_Cred_Transport\CWE523_Unprotected_Cred_Transport.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: Build CWE759_Unsalted_One_Way_Hash
+      run: msbuild CWE759_Unsalted_One_Way_Hash\CWE759_Unsalted_One_Way_Hash.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+    
+    - name: Build CWE760_Predictable_Salt_One_Way_Hash
+      run: msbuild CWE760_Predictable_Salt_One_Way_Hash\CWE760_Predictable_Salt_One_Way_Hash.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: CWE80_XSS_s01
+      run: msbuild CWE80_XSS\s01\CWE80_XSS_s01.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+      
+    - name: CWE80_XSS_s02
+      run: msbuild CWE80_XSS\s02\CWE80_XSS_s02.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: CWE83_XSS_Attribute
+      run: msbuild CWE83_XSS_Attribute\CWE83_XSS_Attribute.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+ 
+    - name: CWE470_Unsafe_Reflection
+      run: msbuild CWE470_Unsafe_Reflection\CWE470_Unsafe_Reflection.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
+    - name: CWE643_Xpath_Injection
+      run: msbuild CWE643_Xpath_Injection\CWE643_Xpath_Injection.csproj /p:Configuration=Debug /p:Platform=AnyCPU /p:UseSharedCompilation=false
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
 
